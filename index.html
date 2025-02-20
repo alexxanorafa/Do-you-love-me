@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Do you love me?</title>
+</head>
+<body>
+  <header>
+    <div class="menu-icon" id="menuIcon">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <nav class="menu" id="menu">
+        <ul>
+            <a href="https://alexxanorafa.github.io/Almas-Conectadas/" class="menu-item">Almas Conectadas</a>
+            <a href="https://alexxanorafa.github.io/Aneis_da_Sabedoria/" class="menu-item">Anéis da Sabedoria</a>
+            <a href="https://alexxanorafa.github.io/Animais-de-Poder/" class="menu-item">Animais de Poder</a>
+            <a href="https://alexxanorafa.github.io/Biblioteca-Onirica/" class="menu-item">Biblioteca Onirica</a>
+            <a href="https://alexxanorafa.github.io/Buzios/" class="menu-item">Buzios</a>
+            <a href="https://alexxanorafa.github.io/Cartas-de-Sibila/" class="menu-item">Cartas de Sibila</a>
+            <a href="https://alexxanorafa.github.io/posicionamentodosastros/" class="menu-item">Carta Astral</a>
+            <a href="https://alexxanorafa.github.io/I-Ching-Virtual/" class="menu-item">I Ching Virtual</a>
+            <a href="https://alexxanorafa.github.io/Jornada-Arquetipica/" class="menu-item">Jornada Arquetípica</a>
+            <a href="https://alexxanorafa.github.io/Kabbalah-Interativa/" class="menu-item">Kabbalah Interativa</a>
+            <a href="https://alexxanorafa.github.io/Livro-das-Sombras/" class="menu-item">Livro das Sombras</a>
+            <a href="https://alexxanorafa.github.io/O-Construtor-do-Destino/" class="menu-item">O Construtor do Destino</a>
+            <a href="https://alexxanorafa.github.io/Oraculo-das-Pedras/" class="menu-item">Oráculo das Pedras</a>
+            <a href="https://alexxanorafa.github.io/Oraculo-dos-Deuses/" class="menu-item">Oráculo dos Deuses</a>
+            <a href="https://alexxanorafa.github.io/Pendulo-Divinatorio/" class="menu-item">Pendulo Divinatorio</a>
+            <a href="https://alexxanorafa.github.io/Runas-Celtas/" class="menu-item">Runas Celtas</a>
+            <a href="https://alexxanorafa.github.io/Runas-do-Destino/" class="menu-item">Runas do Destino</a>
+            <a href="https://alexxanorafa.github.io/Runas-Estelares/" class="menu-item">Runas Estelares</a>
+            <a href="https://alexxanorafa.github.io/Tabuleiro-Quantico/" class="menu-item">Tabuleiro Quantico</a>
+            <a href="https://alexxanorafa.github.io/TarodeMarselha/" class="menu-item">Tarô de Marselha</a>
+            <a href="https://alexxanorafa.github.io/Tasseografia/" class="menu-item">Tasseografia</a>
+            <a href="https://alexxanorafa.github.io/Tempo_e_Sonhos/" class="menu-item">Tempo e Sonhos</a>
+            <a href="https://alexxanorafa.github.io/The-Da-Vinci-Code/" class="menu-item">The Da Vinci Code</a>
+            <a href="https://alexxanorafa.github.io/Whispering-Shadows/" class="menu-item">Whispering Shadows</a>
+            <a href="https://alexxanorafa.github.io/Whispering-Shadows-2/" class="menu-item">Whispering Shadows 2</a>
+            <a href="https://alexxanorafa.github.io/Whispering-Shadows-3/" class="menu-item">Whispering Shadows 3</a>
+            <a href="https://alexxanorafa.github.io/Xamanismo-Animal/" class="menu-item">Xamanismo Animal</a>
+        </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Do you love me?</h1>
+    <div class="buttons">
+      <button id="yesButton">Yes</button>
+      <button id="noButton">NO</button>
+    </div>
+    <div id="message" class="hidden">
+      <svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+              <!-- Gradiente do coração -->
+              <linearGradient id="heartGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#ff4d6d"/>
+                  <stop offset="100%" stop-color="#ffe5ec"/>
+              </linearGradient>
+          </defs>
+  
+          <!-- Camada de fundo do coração para profundidade -->
+          <path d="M100,180 C30,110 30,40 100,60 C170,40 170,110 100,180" 
+                fill="url(#heartGradient)" opacity="0.3">
+              <animate attributeName="opacity" values="0;0.3;0" dur="2s" repeatCount="indefinite"/>
+          </path>
+  
+          <!-- Coração pulsante principal -->
+          <path d="M100,180 C30,110 30,40 100,60 C170,40 170,110 100,180" 
+                fill="url(#heartGradient)">
+              <animateTransform attributeName="transform" type="scale" values="1;1.1;1" begin="0s" dur="1.5s" repeatCount="indefinite"/>
+          </path>
+  
+          <!-- Camada superior para brilho e suavidade -->
+          <path d="M100,180 C30,110 30,40 100,60 C170,40 170,110 100,180" 
+                fill="url(#heartGradient)" opacity="0.2">
+              <animate attributeName="opacity" values="0.2;0.5;0.2" dur="2s" repeatCount="indefinite"/>
+          </path>
+      </svg>
+      <p class="message-text">I knew you would say yes! 💖</p>
+  </div>
+  </main>
+
+  <script>
+        // ========== CÓDIGO DO MENU ==========
+        const menuIcon = document.getElementById("menuIcon");
+    const menu = document.getElementById("menu");
+
+    // Abrir/Fechar menu
+    menuIcon.addEventListener("click", function(e) {
+        e.stopPropagation();
+        menu.classList.toggle("active");
+        menuIcon.classList.toggle("active");
+    });
+
+    // Fechar menu ao clicar fora
+    document.addEventListener("click", function(e) {
+        if (!menu.contains(e.target) && !menuIcon.contains(e.target)) {
+            menu.classList.remove("active");
+            menuIcon.classList.remove("active");
+        }
+    });
+
+    // Animar itens do menu
+    document.querySelectorAll(".menu-item").forEach(item => {
+        item.addEventListener("mouseenter", function() {
+            this.style.transform = "translateY(-3px)";
+        });
+        
+        item.addEventListener("mouseleave", function() {
+            this.style.transform = "translateY(0)";
+        });
+    });
+    document.getElementById("yesButton").addEventListener("click", function() {
+      document.getElementById("message").classList.remove("hidden");
+    });
+
+    document.getElementById("noButton").addEventListener("mouseenter", function() {
+      let x = Math.random() * (window.innerWidth - 100);
+      let y = Math.random() * (window.innerHeight - 50);
+      this.style.position = "absolute";
+      this.style.left = x + "px";
+      this.style.top = y + "px";
+    });
+  </script>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+      :root {
+          --primary: #ff4d6d; /* Vermelho rosado apaixonante */
+          --secondary: #ffe5ec; /* Rosa clarinho suave */
+          --glow-color: #ffd700; /* Dourado brilhante para um toque especial */
+          --border-radius: 12px; /* Bordas mais arredondadas para um visual aconchegante */
+      }
+        
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
+        
+        body {
+          font-family: 'Poppins', sans-serif;
+          padding: 20px;
+          margin-top: 60px; /* Espaço para o header fixo */
+          background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+          min-height: 100vh;
+        }
+        h1 {
+          text-align: center;
+          margin: 15px 0;
+          font-size: 1.4rem;
+          color: var(--primary);
+        }
+        h2 {
+          text-align: center;
+          margin: 15px 0;
+          font-size: 1.2rem;
+          color: var(--primary);
+        }
+        h3 {
+          text-align: center;
+          margin: 35px 0;
+          font-size: 1.0rem;
+          color: var(--secondary);
+        }
+        
+        /* ========== NOVO HEADER ========== */
+        header {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 60px;
+          background: transparent;
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+          padding: 0 20px;
+          z-index: 1000;
+          backdrop-filter: blur(5px);
+          border-bottom: 1px solid var(--primary);
+        }
+        .menu {
+          display: none; /* Esconde completamente */
+          position: absolute;
+          top: -1500px;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 80%;
+          max-width: 350px;
+          background: var(--primary);
+          transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+          border-radius: var(--border-radius);
+          box-shadow: 0 4px 12px var(--secondary);
+          padding: 15px 0;
+          opacity: 0;
+        }
+        .menu-item {
+          background: var(--secondary);
+          border-radius: var(--border-radius);
+          height: 40px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-decoration: none;
+          color: var(--primary);
+          font-size: 0.95em;
+          padding: 0 20px;
+          cursor: pointer;
+          position: relative;
+          transition: all 0.3s ease;
+          border: 1px solid transparent;
+        }
+        
+        .menu-icon {
+          cursor: pointer;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          width: 30px;
+          height: 22px;
+          transition: transform 0.3s;
+        }
+        
+        .menu-item:hover {
+          background: var(--primary);
+          color: var(--secondary);
+          transform: translateY(-2px);
+          border-color: var(--secondary);
+          box-shadow: 0 3px 8px rgba(122, 96, 72, 0.4);
+        }
+        
+        .menu-item::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          border-radius: var(--border-radius);
+          background: radial-gradient(circle at center, 
+                    rgba(212, 177, 146, 0.2) 0%, 
+                    transparent 70%);
+          opacity: 0;
+          transition: opacity 0.3s;
+        }
+        
+        .menu-item:hover::before {
+          opacity: 1;
+        }
+        
+        .menu-icon span {
+          display: block;
+          width: 100%;
+          height: 3px;
+          background: var(--primary);
+          border-radius: 3px;
+          transition: 0.3s;
+        }
+        
+        .menu-icon.active span:nth-child(1) {
+          transform: translateY(8px) rotate(45deg);
+        }
+        
+        .menu-icon.active span:nth-child(2) {
+          opacity: 0;
+        }
+        
+        .menu-icon.active span:nth-child(3) {
+          transform: translateY(-8px) rotate(-45deg);
+        }
+        
+        .menu.active {
+          display: block; /* Mostra quando ativo */
+          top: 65px;
+          opacity: 1;
+        }
+        
+        .menu ul {
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
+          padding: 0 15px;
+          list-style: none;
+          max-height: 80vh; /* Melhor ajuste para telas menores */
+          overflow-y: auto; /* Scroll apenas quando necessário */
+        }
+        
+        /* Ajustes responsivos */
+        @media (max-width: 768px) {
+        .menu-item {
+            height: 25px; /* Reduz altura */
+            font-size: 0.8em; /* Fonte menor */
+            padding: 0 6px; /* Padding reduzido */
+        }
+        }
+        
+        @media (max-width: 480px) {
+          .runa {
+              width: 30px;   /* Ajuste para tamanho legível */
+              height: 40px;
+              font-size: 1.5em;
+          }
+      }
+          .buttons {
+            margin-top: 20px;
+          }
+          button {
+              display: block;
+              margin: 10px auto; /* Auto centraliza quando o display é block */
+              width: fit-content; /* Mantém o tamanho necessário */
+              background-color: var(--primary);
+              color: var(--secondary);
+              border: none;
+              padding: 10px 20px;
+              font-size: 1.2em;
+              border-radius: 5px;
+              cursor: pointer;
+              transition: background-color 0.3s;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+              position: relative;
+          }
+          #yesButton {
+              display: block;
+              margin: 10px auto; /* Auto centraliza quando o display é block */
+              width: fit-content; /* Mantém o tamanho necessário */
+              background-color: var(--primary);
+              color: var(--secondary);
+              border: none;
+              padding: 10px 20px;
+              font-size: 1.2em;
+              border-radius: 5px;
+              cursor: pointer;
+              transition: background-color 0.3s;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+              position: relative;
+          }
+          #noButton {
+              display: block;
+              margin: 10px auto; /* Auto centraliza quando o display é block */
+              width: fit-content; /* Mantém o tamanho necessário */
+              background-color: var(--primary);
+              color: var(--secondary);
+              border: none;
+              padding: 10px 20px;
+              font-size: 1.2em;
+              border-radius: 5px;
+              cursor: pointer;
+              transition: background-color 0.3s;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+              position: relative;
+          }
+          .hidden {
+            display: none;
+            font-size: 1.5rem;
+            color: var(--secondary);
+            margin-top: 20px;
+          }
+          #message {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+              animation: slideIn 0.5s forwards, colorChange 2s infinite alternate;
+          }
+          svg {
+            margin-top: 20px;
+          }
+  </style>
+</body>
+</html>
