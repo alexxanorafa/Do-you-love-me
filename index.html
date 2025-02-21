@@ -6,6 +6,8 @@
   <title>Do you love me?</title>
   <!-- Ícones do FontAwesome para os botões de partilha -->
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
 </head>
 <body>
   <header>
@@ -23,7 +25,6 @@
             <a href="https://alexxanorafa.github.io/Buzios/" class="menu-item">Buzios</a>
             <a href="https://alexxanorafa.github.io/Cartas-de-Sibila/" class="menu-item">Cartas de Sibila</a>
             <a href="https://alexxanorafa.github.io/posicionamentodosastros/" class="menu-item">Carta Astral</a>
-            <a href="https://alexxanorafa.github.io/Do-you-love-me/" class="menu-item">Do you love me?</a>
             <a href="https://alexxanorafa.github.io/I-Ching-Virtual/" class="menu-item">I Ching Virtual</a>
             <a href="https://alexxanorafa.github.io/Jornada-Arquetipica/" class="menu-item">Jornada Arquetípica</a>
             <a href="https://alexxanorafa.github.io/Kabbalah-Interativa/" class="menu-item">Kabbalah Interativa</a>
@@ -87,21 +88,18 @@
       <input type="text" id="userName" placeholder="Escreva o seu nome" class="name-input">
       <!-- Botões de partilha -->
       <div class="share-buttons">
-        <button class="share-button" onclick="shareOnFacebook()">
-          <i class="fab fa-facebook"></i>
-        </button>
-        <button class="share-button" onclick="shareOnX()">
-          <i class="fab fa-x-twitter"></i>
-        </button>
-        <button class="share-button" onclick="shareOnInstagram()">
+        <a class="share-icon" onclick="shareOnFacebook()" aria-label="Compartilhar no Facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a class="share-icon" onclick="shareOnInstagram()" aria-label="Compartilhar no Instagram">
           <i class="fab fa-instagram"></i>
-        </button>
-        <button class="share-button" onclick="shareOnTikTok()">
+        </a>
+        <a class="share-icon" onclick="shareOnTikTok()" aria-label="Compartilhar no TikTok">
           <i class="fab fa-tiktok"></i>
-        </button>
-        <button class="share-button" onclick="shareOnWhatsApp()">
+        </a>
+        <a class="share-icon" onclick="shareOnWhatsApp()" aria-label="Compartilhar no WhatsApp">
           <i class="fab fa-whatsapp"></i>
-        </button>
+        </a>
       </div>
     </div>
   </main>
