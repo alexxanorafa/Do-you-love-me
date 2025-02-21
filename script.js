@@ -50,29 +50,32 @@ function moveButton(button) {
 
 // ========== FUNÇÕES DE PARTILHA ==========
 function shareOnFacebook() {
-    const url = encodeURIComponent(window.location.href);
-    window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`, "_blank");
+  const url = encodeURIComponent(window.location.href);
+  window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`, "_blank");
 }
 
-function shareOnX() {
+  function shareOnX() {
     const text = encodeURIComponent("I knew you would say yes! 💖");
     const url = encodeURIComponent(window.location.href);
     window.open(`https://x.com/intent/post?text=${text}&url=${url}`, "_blank");
-}
+  }
 
-function shareOnInstagram() {
-    alert("Copie o link e compartilhe manualmente no Instagram!");
-}
-
-function shareOnTikTok() {
-    alert("Copie o link e compartilhe manualmente no TikTok!");
-}
-
-function shareOnWhatsApp() {
+  function shareOnInstagram() {
+    const url = encodeURIComponent(window.location.href);
+    window.open(`https://www.instagram.com/?url=${url}`, "_blank");
+  }
+  
+  function shareOnTikTok() {
+    const url = encodeURIComponent(window.location.href);
+    window.open(`https://www.tiktok.com/share?url=${url}`, "_blank");
+  }
+  
+  function shareOnWhatsApp() {
     const text = encodeURIComponent("I knew you would say yes! 💖");
     const url = encodeURIComponent(window.location.href);
     window.open(`https://api.whatsapp.com/send?text=${text}%20${url}`, "_blank");
-}
+  }
+  
 
 // ========== CORREÇÃO GSI_LOGGER ==========
 window.google = window.google || {};
